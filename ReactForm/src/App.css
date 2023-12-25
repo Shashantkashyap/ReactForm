@@ -1,0 +1,101 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #9e9a9a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+input,
+select {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.checkBoxes{
+  display: flex;
+  gap: 10px;
+}
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.radio label {
+  margin-right: 20px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+  input,
+  select {
+    width: 100%;
+  }
+}
